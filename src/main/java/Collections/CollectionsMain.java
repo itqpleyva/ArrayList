@@ -166,6 +166,36 @@ public class CollectionsMain {
 		else
 			System.out.println("Not Equals");
 		
+		//calculating if two words are anagrams
+		String word1 = "peek";
+		String word2 = "keep";
+		ArrayList<String> tmpArray = new ArrayList<String>();
+		
+		if(word1.length() == word2.length()) {
+			for (int i = 0; i < word1.length(); i++) {
+				 
+				tmpArray.add(word2.contains(Character.toString(word1.charAt(i))) ? "true":"false");			
+			}
+			//ONE SOLUTION
+
+			long tmp = tmpArray.stream().filter(a -> a == "false").count();
+			
+			if (tmp > 0) {
+				System.out.println("The words are not anagrams");
+			}
+			else
+				System.out.println("The words are Anagrams");
+			
+			//OTHER SOLUTION
+			
+			if (tmpArray.contains("false")) {
+				System.out.println("The words are not anagrams");
+			}
+			else
+				System.out.println("The words are Anagrams");
+		}
+		else
+			System.out.println("The words are not Anagrams");
 	}
 	
 
