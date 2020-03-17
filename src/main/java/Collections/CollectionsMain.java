@@ -2,6 +2,7 @@ package Collections;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.Optional;
 
 public class CollectionsMain {
@@ -196,7 +197,25 @@ public class CollectionsMain {
 		}
 		else
 			System.out.println("The words are not Anagrams");
+		
+		//convert linkedlist to arraylist
+		LinkedList<String> linkedList = new LinkedList<String>();
+		
+			linkedList.add("FirstValue");
+			linkedList.add("SecondValue");
+			linkedList.add("ThirdValue");
+			linkedList.add("FourthValue");
+			linkedList.add("FifthValue");
+			
+		System.out.println("------------------------------------------------------------");
+		System.out.println("printing generated arrayList");
+		ArrayList<String> l = new ArrayList<String>(linkedList);// is the same procedure with other collections
+		l.forEach(System.out::println);
+
 	}
 	
+		
+		
+
 
 }
