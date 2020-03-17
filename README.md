@@ -1,5 +1,5 @@
 # ArrayList
-a repo to study arrayList collection
+a repo to study ArrayList collection
 
 
 
